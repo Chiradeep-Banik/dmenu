@@ -4,7 +4,7 @@
 static int topbar = 1;                      /* -b  option; if 0, dmenu appears at bottom     */
 static int fuzzy = 1;                      /* -F  option; if 0, dmenu doesn't use fuzzy matching     */
 static int centered = 1;                    /* -c option; centers dmenu on screen */
-static int min_width = 500;                    /* minimum width when centered */
+static int min_width = 700;                    /* minimum width when centered */
 /* -fn option overrides fonts[0]; default X11 font or font set */
 static const char *fonts[] = {
 	"JetBrains Mono:size=10"
@@ -19,8 +19,11 @@ static const char *colors[SchemeLast][2] = {
 	[SchemeOut] = { "#000000", "#00ffff" },
 };
 /* -l and -g options; controls number of lines and columns in grid if > 0 */
-static unsigned int lines      = 10;
+static unsigned int lines      = 7;
 static unsigned int columns    = 4;
+/* -h option; minimum height of a menu line */
+static unsigned int lineheight = 50;
+static unsigned int min_lineheight = 8;
 /*
  * Characters not considered part of a word while deleting words
  * for example: " /?\"&[]"
